@@ -17,3 +17,19 @@
         "pagination"
         "footer";
 }
+.header {
+    grid-area: header;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+}
+.header p{
+    margin-top:1rem;
+    text-align: center;
+}
+
+.header select {
+    width: 20rem;
+    height: 2rem;
+  margin-left: 20%;
+}
