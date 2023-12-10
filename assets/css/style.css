@@ -182,18 +182,7 @@
     padding-right: 5px;
     margin-top: 10px;
 }
-/*-----------------------------------------tablet-------------------------------------------*/
-@media (min-width: 700px) {
-    .body {
-        grid-template-columns: 100% auto;
-        grid-template-rows: 50px 50px auto 50px;
-        grid-template-areas:
-            "header header"
-            "aside aside"
-            "main main"
-            "footer footer";
-    }
-}
+
 /*-------------------------------------------pc------------------------------------------------*/
 
 @media (min-width:576px) {
