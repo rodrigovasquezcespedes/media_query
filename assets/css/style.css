@@ -6,3 +6,14 @@
     box-sizing: border-box;
     font-family: 'Roboto', 'Lucida Sans Regular';
 }
+.body {
+    display: grid;
+    grid-template-columns: 100% auto;
+    grid-template-rows: 50px 5rem 228rem 70px 50px;
+    grid-template-areas:
+        "aside"
+        "header"
+        "main"
+        "pagination"
+        "footer";
+}
