@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', 'Lucida Sans Regular';
 }
+
 .body {
     display: grid;
     grid-template-columns: 100% auto;
@@ -17,43 +18,48 @@
         "pagination"
         "footer";
 }
+
 .header {
     grid-area: header;
     background-color: #e2e2e2;
     display: flex;
     flex-direction: column;
 }
-.header p{
-    margin-top:1rem;
+
+.header p {
+    margin-top: 1rem;
     text-align: center;
 }
 
 .header select {
     width: 20rem;
     height: 2rem;
-  margin-left: 20%;
+    margin-left: 20%;
 }
+
 .aside {
     grid-area: aside;
     background-color: #00579c;
-    display: block;
 }
-.logo{
-    display:flex;
+
+.logo {
+    display: flex;
     color: #ffffff;
     margin-left: 1rem;
     margin-top: 1rem;
 }
-.logo i{
-    padding-right:6px ; 
+
+.logo i {
+    padding-right: 6px;
 }
 
 .nav {
     grid-area: nav;
-
+    display: flex;
 }
 
 .nav ul {
+    flex-direction: column;
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -74,8 +80,9 @@
     font-size: 20px;
     text-decoration: none;
     color: #ffffff;
-    
+
 }
+
 .checkbtn i {
     font-size: 24px;
     position: absolute;
@@ -102,9 +109,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    /* Crea 3 columnas de igual tamaño */
     grid-template-rows: repeat(8, 450px);
-    /* Crea 3 filas de altura fija de 100px */
     gap: 10px;
 }
 
@@ -127,13 +132,14 @@
     width: 25rem;
     height: 20rem;
 }
-.card a{
+
+.card a {
     text-decoration: none;
     background-color: #00579c;
     color: #ffffff;
     border: 1px solid #918e8e;
-    padding: 10px;   
-    margin-top:1rem ;
+    padding: 10px;
+    margin-top: 1rem;
 }
 
 .footer {
@@ -142,42 +148,108 @@
     color: #ffffff;
     text-align: center;
 }
-/* Estilos generales de la paginación */
+
 .pagination {
     grid-area: pagination;
-    list-style: none;
     text-align: center;
     margin-top: 1rem;
-  }
-  
-  /* Estilo de los elementos de la paginación */
-  .pagination a {
+}
+
+.pagination a {
     color: #0454cc;
     padding: 10px;
     text-decoration: none;
     box-shadow: 0 0 10px #919090;
 
-  }
-  
-  /* Estilo del enlace activo */
-  .pagination a.active {
+}
+
+.pagination a.active {
     background-color: #dbdbdb;
     color: white;
-  }
-  
-  /* Estilo del enlace "Anterior" y "Siguiente" */
-  .pagination a.prev,
-  .pagination a.next {
+}
+
+.pagination a.prev,
+.pagination a.next {
     font-weight: bold;
-  }
-  
-  /* Estilo al pasar el cursor sobre los enlaces */
-  .pagination a:hover {
+}
+
+.pagination a:hover {
     background-color: #f2f2f2;
-  }
-  
+}
+
 
 .footer i {
     padding-right: 5px;
     margin-top: 10px;
+}
+
+@media (min-width:576px) {
+    .body {
+        grid-template-columns: 12rem auto;
+        grid-template-rows: 5rem 29rem 7.05rem;
+        grid-template-areas:
+            /*grid area */
+            "aside header header"
+            "aside main  main "
+            "footer main main";
+    }
+
+    .header select {
+        width: 70rem;
+        height: 2rem;
+        margin-left: 2rem;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .nav ul {
+        position: absolute;
+        left: 0%;
+        color: #ffffff;
+        width: 12rem;
+        height: auto;
+        transition: none;
+        background-color: #00579c;
+
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* Crea 3 columnas de igual tamaño */
+        grid-template-rows: repeat(2, 16rem);
+        gap: 3px;
+        /* Espacio entre las tarjetas */
+    }
+
+    .card {
+
+        width: 13rem;
+        height: 13rem;
+        border: 1px solid #fcfcfc;
+        text-align: center;
+    }
+
+    .card img {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .card a {
+        text-decoration: none;
+        background-color: #00579c;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        padding: 10px;
+    }
+
+    .checkbtn {
+        display: none;
+    }
+
+    .footer p {
+        padding-top: 2rem;
+    }
 }
